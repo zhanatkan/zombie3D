@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	546945302	bon			\Default Work Unit\bon	
+	915214409	gun			\Default Work Unit\gun	
+	1182229370	per			\Default Work Unit\per	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	301696948	byistraya-chetkaya-perezaryadka-orujiya (1)	C:\Users\Алихан\Documents\GitHub\z.unity\zx\zx_WwiseProject\.cache\Windows\SFX\byistraya-chetkaya-perezaryadka-orujiya (1)_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\byistraya-chetkaya-perezaryadka-orujiya (1)		117984
+	370534449	edinstvennyiy-pritselnyiy-vyistrel	C:\Users\Алихан\Documents\GitHub\z.unity\zx\zx_WwiseProject\.cache\Windows\SFX\edinstvennyiy-pritselnyiy-vyistrel_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\edinstvennyiy-pritselnyiy-vyistrel		419168
+	911701084	korotkiy-schelchok-kompyuternoy-myishi	C:\Users\Алихан\Documents\GitHub\z.unity\zx\zx_WwiseProject\.cache\Windows\SFX\korotkiy-schelchok-kompyuternoy-myishi_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\korotkiy-schelchok-kompyuternoy-myishi		14176
+

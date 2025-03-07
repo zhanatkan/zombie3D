@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{5FCA33EA-2A1B-6462-4075-B700F28AE150}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="988953028" Name="SFXVolume"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="4072029455" Type="User" Language="SFX" Hash="{C0D53E5F-2982-56A9-45B9-A9D5421F3007}">
+			<ShortName>New_SoundBank</ShortName>
+			<Path>New_SoundBank.bnk</Path>
+			<Media>
+				<File Id="301696948" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>byistraya-chetkaya-perezaryadka-orujiya (1).wav</ShortName>
+					<CachePath>SFX/byistraya-chetkaya-perezaryadka-orujiya (1)_818F3B66.wem</CachePath>
+				</File>
+				<File Id="370534449" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>edinstvennyiy-pritselnyiy-vyistrel.wav</ShortName>
+					<CachePath>SFX/edinstvennyiy-pritselnyiy-vyistrel_818F3B66.wem</CachePath>
+				</File>
+				<File Id="911701084" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>korotkiy-schelchok-kompyuternoy-myishi.wav</ShortName>
+					<CachePath>SFX/korotkiy-schelchok-kompyuternoy-myishi_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="546945302" Name="bon" DurationType="OneShot" DurationMin="0.07981859" DurationMax="0.07981859">
+					<MediaRefs>
+						<MediaRef Id="911701084"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="915214409" Name="gun" DurationType="OneShot" DurationMin="2.3756917" DurationMax="2.3756917">
+					<MediaRefs>
+						<MediaRef Id="370534449"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1182229370" Name="per" DurationType="OneShot" DurationMin="1.3365986" DurationMax="1.3365986">
+					<MediaRefs>
+						<MediaRef Id="301696948"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{F2959E92-0C19-2D46-EE4A-B183BE6B73D2}</FileHash>
+</SoundBanksInfo>
