@@ -19,7 +19,6 @@ public class BonusEffectSystem : IEcsRunSystem
     }
     public void Run()
     {
-        // Обработка бонусов, связанных с оружием
         foreach (var j in weaponFilter)
         {
             var playerEntity = weaponFilter.GetEntity(j);
@@ -30,7 +29,7 @@ public class BonusEffectSystem : IEcsRunSystem
                 handler.ApplyBonus(playerEntity, ref effect);
             }
         }
-        // Обработка бонусов, связанных с игроком
+        
         foreach (var i in playerFilter)
         {
             var playerEntity = playerFilter.GetEntity(i);

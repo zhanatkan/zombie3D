@@ -14,7 +14,6 @@ public class EnemyFollowSystem : IEcsRunSystem
             ref var enemy = ref followingEnemies.Get1(i);
             ref var follow = ref followingEnemies.Get2(i);
 
-            // при работе с сущностями нужно всегда сначала удостовериться, не уничтожены ли они
             if (!follow.target.IsAlive())
             {
                 ref var entity = ref followingEnemies.GetEntity(i);

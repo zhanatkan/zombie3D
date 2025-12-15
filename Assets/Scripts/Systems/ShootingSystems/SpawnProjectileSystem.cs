@@ -12,7 +12,6 @@ public class SpawnProjectileSystem : IEcsRunSystem
         {
             ref var weapon = ref filter.Get1(i);
 
-            // Создаем GameObject пули и ее сущность
             var projectileGO = Object.Instantiate(weapon.projectilePrefab, weapon.projectileSocket.position, Quaternion.identity);
             var projectileEntity = ecsWorld.NewEntity();
 

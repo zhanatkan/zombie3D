@@ -44,7 +44,7 @@ public class EnemyWaveSystem : IEcsInitSystem, IEcsRunSystem
     {
         currentWave++;
         ui.gameScreen.SetWave(currentWave);
-        enemiesToSpawn = 2 + currentWave; // Увеличиваем количество врагов с каждой волной
+        enemiesToSpawn = 2 + currentWave; 
         enemiesAlive = enemiesToSpawn;
         SpawnEnemies();
     }
@@ -86,7 +86,6 @@ public class EnemyWaveSystem : IEcsInitSystem, IEcsRunSystem
             shootingEnemy.shootDistance = enemyView.shootingEnemyData.shootDistance;
             shootingEnemy.nextShootTime = Time.time + shootingEnemy.shootInterval;
 
-            // Передаем данные о пуле и точке выстрела
             enemy.projectilePrefab = enemyView.shootingEnemyData.projectilePrefab;
             enemy.projectileSocket = enemyView.shootingEnemyData.projectileSocket;
 

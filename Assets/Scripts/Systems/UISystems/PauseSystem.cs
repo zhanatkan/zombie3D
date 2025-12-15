@@ -34,6 +34,7 @@ internal class PauseSystem : IEcsRunSystem
         }
     }
 }
+
 public class PauseButtonSystem : IEcsInitSystem, IEcsRunSystem, IEcsDestroySystem
 {
     private EcsWorld _world;

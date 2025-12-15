@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerInputSystem : IEcsRunSystem
 {
     private EcsFilter<PlayerInputData, HasWeapon> filter;
-    //private EcsWorld ecsWorld;
+    
     public void Run()
     {
         foreach (var i in filter)
@@ -14,11 +14,6 @@ public class PlayerInputSystem : IEcsRunSystem
             input.moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
 
             input.shootInput = Input.GetMouseButtonDown(0);
-
-            /*if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                ecsWorld.NewEntity().Get<PauseEvent>();
-            }*/
 
             if (Input.GetKeyDown(KeyCode.R))
             {

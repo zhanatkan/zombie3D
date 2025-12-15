@@ -33,7 +33,6 @@ public class EnemyInitSystem : IEcsInitSystem
                 shootingEnemy.shootDistance = enemyView.shootingEnemyData.shootDistance;
                 shootingEnemy.nextShootTime = Time.time + shootingEnemy.shootInterval;
 
-                // Передаем данные о пуле и точке выстрела
                 enemy.projectilePrefab = enemyView.shootingEnemyData.projectilePrefab;
                 enemy.projectileSocket = enemyView.shootingEnemyData.projectileSocket;
             }

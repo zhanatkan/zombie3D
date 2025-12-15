@@ -1,7 +1,7 @@
 using UnityEngine;
 public class ShieldController : MonoBehaviour
 {
-    public float duration = 5f; 
+    [SerializeField] private float duration = 5f; 
     private float timer;
 
     private void Start()

@@ -9,7 +9,6 @@ public class EnemyViewEditor : Editor
     {
         var enemyView = (EnemyView)target;
 
-        // Отображаем стандартные поля
         enemyView.navMeshAgent = (NavMeshAgent)EditorGUILayout.ObjectField("NavMeshAgent", enemyView.navMeshAgent, typeof(NavMeshAgent), true);
         enemyView.enemyObject = (GameObject)EditorGUILayout.ObjectField("Enemy Object", enemyView.enemyObject, typeof(GameObject), true);
         enemyView.meleeAttackDistance = EditorGUILayout.FloatField("Melee Attack Distance", enemyView.meleeAttackDistance);
@@ -18,16 +17,13 @@ public class EnemyViewEditor : Editor
         enemyView.startHealth = EditorGUILayout.IntField("Start Health", enemyView.startHealth);
         enemyView.damage = EditorGUILayout.IntField("Damage", enemyView.damage);
 
-        // Отображаем поле IsShootingEnemy
         enemyView.isShootingEnemy = EditorGUILayout.Toggle("Is Shooting Enemy", enemyView.isShootingEnemy);
 
-        // Если враг стреляющий, отображаем поле ShootingEnemyData
         if (enemyView.isShootingEnemy)
         {
             enemyView.shootingEnemyData = (ShootingEnemyData)EditorGUILayout.ObjectField("Shooting Enemy Data", enemyView.shootingEnemyData, typeof(ShootingEnemyData), false);
         }
 
-        // Сохраняем изменения
         if (GUI.changed)
         {
             EditorUtility.SetDirty(enemyView);

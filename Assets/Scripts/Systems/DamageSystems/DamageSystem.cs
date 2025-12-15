@@ -6,9 +6,9 @@ public class DamageSystem : IEcsRunSystem
     private UI ui;
     public void Run()
     {
-        foreach (var i in damageEvents)
+        foreach (var damageEvent in damageEvents)
         {
-            ref var e = ref damageEvents.Get1(i);
+            ref var e = ref damageEvents.Get1(damageEvent);
             ref var health = ref e.target.Get<Health>();
 
             health.health -= e.value;
@@ -28,7 +28,7 @@ public class DamageSystem : IEcsRunSystem
             {
                 ui.gameScreen.SetHealth(health.health);
             }
-            damageEvents.GetEntity(i).Destroy();
+            damageEvents.GetEntity(damageEvent).Destroy();
         }
     }
 }

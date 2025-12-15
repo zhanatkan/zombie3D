@@ -7,37 +7,53 @@ public class PlayerView : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // ЛКМ для стрельбы
+        if (Input.GetMouseButtonDown(0)) 
         {
             Shoot();
         }
-        if (Input.GetKeyDown(KeyCode.R)) // Клавиша R для перезарядки
+        if (Input.GetKeyDown(KeyCode.R))
         {
             Reload();
         }
     }
 
-    public void Shoot()
+    private void Shoot()
     {
-        if (entity.IsNull()) return;
+        if (entity.IsNull())
+        {
+            return;
+        }
 
-        if (!entity.Has<HasWeapon>()) return;
+        if (!entity.Has<HasWeapon>())
+        {
+            return;
+        }
 
         var weaponEntity = entity.Get<HasWeapon>().weapon;
-        if (weaponEntity.IsNull()) return;
-
+        if (weaponEntity.IsNull())
+        {
+            return;
+        }
         weaponEntity.Get<Shoot>();
-        return;
     }
+    
     public void Reload()
     {
-        if (entity.IsNull()) return;
+        if (entity.IsNull())
+        {
+            return;
+        }
 
-        if (!entity.Has<HasWeapon>()) return;
+        if (!entity.Has<HasWeapon>())
+        {
+            return;
+        }
 
         var weaponEntity = entity.Get<HasWeapon>().weapon;
-        if (weaponEntity.IsNull()) return;
-
+        if (weaponEntity.IsNull())
+        {
+            return;
+        }
         weaponEntity.Get<ReloadingFinished>();
     }
 }
