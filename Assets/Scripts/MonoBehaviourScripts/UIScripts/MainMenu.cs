@@ -4,16 +4,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public Button character1Button;
-    public Button character2Button;
-    public Button character3Button;
+    [SerializeField] private Button character1Button;
+    [SerializeField] private Button character2Button;
+    [SerializeField] private Button character3Button;
 
-    public string sceneName;
+    [SerializeField] private string sceneName;
 
     private void Start()
     {
         PlayerPrefs.DeleteKey("SelectedCharacter");
-        // Назначаем методы на кнопки
+        
         character1Button.onClick.AddListener(() => SelectCharacter(1));
         character2Button.onClick.AddListener(() => SelectCharacter(2));
         character3Button.onClick.AddListener(() => SelectCharacter(3));
@@ -21,7 +21,6 @@ public class MainMenu : MonoBehaviour
 
     private void SelectCharacter(int characterIndex)
     {
-        // Сохраняем выбор персонажа в PlayerPrefs
         PlayerPrefs.SetInt("SelectedCharacter", characterIndex);
         PlayerPrefs.Save();
 

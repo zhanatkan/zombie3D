@@ -3,9 +3,9 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 public class SoundController : MonoBehaviour
 {
-    public string volumeParameter = "WorldAudio";
-    public AudioMixer mixer;
-    public Slider slider;
+    [SerializeField] private string volumeParameter = "WorldAudio";
+    [SerializeField] private AudioMixer mixer;
+    [SerializeField] private Slider slider;
     private const float _multiplier = 20f;
 
     private void Awake()

@@ -2,15 +2,16 @@ using Leopotam.Ecs;
 using UnityEngine;
 public class EcsStartup : MonoBehaviour
 {
-    public StaticData configuration;
-    public SceneData sceneData;
-    public UI ui;
-    public BonusStaticData bonus;
+    [SerializeField] private StaticData configuration;
+    [SerializeField] private SceneData sceneData;
+    [SerializeField] private UI ui;
+    [SerializeField] private BonusStaticData bonus;
 
-    [HideInInspector]public EcsWorld ecsWorld;
+    public EcsWorld ecsWorld { get; private set; }
     private EcsSystems updateSystems;
     private EcsSystems fixedUpdateSystems;
     private EnemyWaveSystem waveSystem;
+    
     private void Start()
     {
         Time.timeScale = 1f;
